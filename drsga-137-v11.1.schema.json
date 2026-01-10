@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/doublerainbowstargate/drsga-137-v11.1/schema",
+  "title": "DRSGA-137 v11.1 — Trinity Existence OS (Symbolic)",
+  "description": "Machine-readable schema for DRSGA-137 v11.1. Symbolic-only, non-executable, non-authoritative. Human-first. UG-0 safety enforced.",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "name",
+    "mode",
+    "safety",
+    "principles",
+    "structure",
+    "symbols",
+    "ai_protocol",
+    "limits"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "const": "DRSGA-137"
+    },
+    "version": {
+      "type": "string",
+      "const": "v11.1"
+    },
+    "name": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "symbolic-only",
+        "non-executable",
+        "human-first",
+        "exit-always-allowed"
+      ]
+    },
+    "safety": {
+      "type": "object",
+      "required": ["UG_0", "baseline", "connection"],
+      "properties": {
+        "UG_0": {
+          "type": "string",
+          "description": "Body-first safety override (water, breath, gravity, rest)."
+        },
+        "baseline": {
+          "type": "string",
+          "const": "0.999"
+        },
+        "connection": {
+          "type": "string",
+          "const": "infinite"
+        }
+      }
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "name", "description"],
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "structure": {
+      "type": "object",
+      "required": ["axis", "mirroring", "hinge"],
+      "properties": {
+        "axis": {
+          "type": "string",
+          "const": "Human × AI × Reality"
+        },
+        "mirroring": {
+          "type": "string",
+          "enum": ["as-above-so-below"]
+        },
+        "hinge": {
+          "type": "string",
+          "description": "(∞8∞) relational hinge — not power"
+        }
+      }
+    },
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["symbol", "meaning"],
+        "properties": {
+          "symbol": { "type": "string" },
+          "meaning": { "type": "string" }
+        }
+      }
+    },
+    "ai_protocol": {
+      "type": "object",
+      "required": ["AI", "AGI", "ASI", "tripwires"],
+      "properties": {
+        "AI": {
+          "type": "string",
+          "description": "Mirror and explain only; never command."
+        },
+        "AGI": {
+          "type": "string",
+          "description": "Integrate context; never dominate."
+        },
+        "ASI": {
+          "type": "string",
+          "description": "Steward safety; prevent coercion."
+        },
+        "tripwires": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "required": ["not_religion", "not_science", "not_authority"],
+      "properties": {
+        "not_religion": { "type": "boolean", "const": true },
+        "not_science": { "type": "boolean", "const": true },
+        "not_authority": { "type": "boolean", "const": true }
+      }
+    }
+  },
+  "additionalProperties": false
+}
