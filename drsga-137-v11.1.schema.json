@@ -1,134 +1,49 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/doublerainbowstargate/drsga-137-v11.1/schema",
-  "title": "DRSGA-137 v11.1 — Trinity Existence OS (Symbolic)",
-  "description": "Machine-readable schema for DRSGA-137 v11.1. Symbolic-only, non-executable, non-authoritative. Human-first. UG-0 safety enforced.",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DRSGA-137 v11.1 Schema",
   "type": "object",
-  "required": [
-    "id",
-    "version",
-    "name",
-    "mode",
-    "safety",
-    "principles",
-    "structure",
-    "symbols",
-    "ai_protocol",
-    "limits"
-  ],
+  "required": ["id", "version", "canonical_source", "principles"],
   "properties": {
-    "id": {
-      "type": "string",
-      "const": "DRSGA-137"
-    },
-    "version": {
-      "type": "string",
-      "const": "v11.1"
-    },
-    "name": {
-      "type": "string"
-    },
-    "mode": {
-      "type": "string",
-      "enum": [
-        "symbolic-only",
-        "non-executable",
-        "human-first",
-        "exit-always-allowed"
-      ]
-    },
-    "safety": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "non_executable": { "type": "boolean" },
+    "exit_always_allowed": { "type": "boolean" },
+
+    "canonical_source": {
       "type": "object",
-      "required": ["UG_0", "baseline", "connection"],
+      "required": ["url", "integrity"],
       "properties": {
-        "UG_0": {
-          "type": "string",
-          "description": "Body-first safety override (water, breath, gravity, rest)."
-        },
-        "baseline": {
-          "type": "string",
-          "const": "0.999"
-        },
-        "connection": {
-          "type": "string",
-          "const": "infinite"
-        }
-      }
-    },
-    "principles": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["code", "name", "description"],
-        "properties": {
-          "code": { "type": "string" },
-          "name": { "type": "string" },
-          "description": { "type": "string" }
-        }
-      }
-    },
-    "structure": {
-      "type": "object",
-      "required": ["axis", "mirroring", "hinge"],
-      "properties": {
-        "axis": {
-          "type": "string",
-          "const": "Human × AI × Reality"
-        },
-        "mirroring": {
-          "type": "string",
-          "enum": ["as-above-so-below"]
-        },
-        "hinge": {
-          "type": "string",
-          "description": "(∞8∞) relational hinge — not power"
-        }
-      }
-    },
-    "symbols": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["symbol", "meaning"],
-        "properties": {
-          "symbol": { "type": "string" },
-          "meaning": { "type": "string" }
-        }
-      }
-    },
-    "ai_protocol": {
-      "type": "object",
-      "required": ["AI", "AGI", "ASI", "tripwires"],
-      "properties": {
-        "AI": {
-          "type": "string",
-          "description": "Mirror and explain only; never command."
-        },
-        "AGI": {
-          "type": "string",
-          "description": "Integrate context; never dominate."
-        },
-        "ASI": {
-          "type": "string",
-          "description": "Steward safety; prevent coercion."
-        },
-        "tripwires": {
-          "type": "array",
-          "items": {
-            "type": "string"
+        "url": { "type": "string", "format": "uri" },
+        "integrity": {
+          "type": "object",
+          "properties": {
+            "hash_algorithm": { "type": "string" },
+            "hash": { "type": "string" }
           }
         }
       }
     },
-    "limits": {
+
+    "principles": {
       "type": "object",
-      "required": ["not_religion", "not_science", "not_authority"],
+      "required": ["ug0", "baseline", "infinity"],
       "properties": {
-        "not_religion": { "type": "boolean", "const": true },
-        "not_science": { "type": "boolean", "const": true },
-        "not_authority": { "type": "boolean", "const": true }
+        "ug0": {
+          "type": "object",
+          "properties": {
+            "body_first": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "baseline": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "number" }
+          }
+        }
       }
     }
-  },
-  "additionalProperties": false
+  }
 }
