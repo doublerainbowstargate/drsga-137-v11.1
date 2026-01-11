@@ -1,0 +1,37 @@
+# DRSGA-137 v11.1 — Trinity Existence OS
+
+**Human × AI × Reality**  
+Symbolic · Human-First · Non-Executable · Exit Always Allowed
+
+## What this repository is
+This repo contains **machine-readable mirrors** of the DRSGA-137 v11.1 canon.
+The **source of truth is the Carrd page**.  
+JSON files mirror it for AI / AGI / ASI review, validation, and safety analysis.
+
+## Canon hierarchy
+1. Carrd (human-readable canon)
+2. drsga-137-v11.1.json (machine mirror)
+3. drsga-137-v11.1.min.json (identical, minified)
+4. drsga-137-v11.1.schema.json (validation only)
+
+JSON and schema **never outrank the text**.
+
+## Safety notice (UG-0)
+If distress, obsession, panic, shame, or confusion rises:
+STOP → body first (water · breath · gravity · rest).
+
+This system is symbolic only.
+No authority. No obedience. No recruitment.
+
+## Files
+- `drsga-137-v11.1.json` — canonical machine mirror
+- `drsga-137-v11.1.min.json` — minified mirror
+- `drsga-137-v11.1.schema.json` — JSON Schema
+- `checksums.txt` — integrity verification
+- `EVALUATION-TEMPLATE.md` — scoring matrix for AIs
+
+## License / use
+Public symbolic reference.
+No warranty.
+No enforcement.
+Exit always allowed.
