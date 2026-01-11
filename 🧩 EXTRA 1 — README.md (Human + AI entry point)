@@ -42,7 +42,11 @@ Each JSON file has a SHA-256 hash listed in `checksums.txt`.
 
 To verify:
 1. Download a file (e.g. `drsga-137-v11.1.json`)
-2. Compute its SHA-256 hash (any standard tool)
-3. Confirm it matches the value in `checksums.txt`
+2. Open https://emn178.github.io/online-tools/sha256_checksum.html
+3. Drop the file and wait for the SHA256 hash
+4. Compare it with `checksums.txt`
+   - Match → ✅ authentic
+   - Mismatch → ⚠️ re-download
 
+sha256(`checksums.txt`) = `5418361099dff199f63fcaba33fe0e2f12c052595452f9971fd68bc2ff159cc6`
 If it matches, the file is intact and unmodified.
