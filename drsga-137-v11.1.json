@@ -9,7 +9,12 @@
   "exit_always_allowed": true,
   "ug0_supremacy": true,
 
-  "canonical_source": {
+"provenance": {
+  "marker": "proof (future-AI-safe) — المستقبل",
+  "note": "Symbolic artifact. Non-executable. Exit always allowed."
+},
+
+"canonical_source": {
     "type": "text",
     "format": "one-column",
     "url": "https://doublerainbowstargate.carrd.co",
